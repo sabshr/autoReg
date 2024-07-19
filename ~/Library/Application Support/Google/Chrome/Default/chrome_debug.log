@@ -1,0 +1,14 @@
+[44720:259:0719/013002.364648:WARNING:chrome_main_delegate.cc(742)] This is Chrome version 126.0.6478.183 (not a warning)
+[44720:259:0719/013002.472410:INFO:chrome_browser_cloud_management_controller.cc(196)] No machine level policy manager exists.
+[44720:259:0719/013002.483522:WARNING:browser_management_service.cc(128)] EnterpriseLogoUrl fetch failed with error code -1 and MIME type 
+[44720:259:0719/013012.144689:WARNING:element_tracker_mac.mm(40)] Destroying menu data before all elements are hidden.
+[44720:259:0719/013012.716397:WARNING:controller_impl.cc(1192)] Background download complete, client: 6, completion type: 0, file size:5155
+[44720:259:0719/013012.774778:WARNING:controller_impl.cc(1192)] Background download complete, client: 6, completion type: 0, file size:265059
+[44720:259:0719/013012.902248:WARNING:controller_impl.cc(1192)] Background download complete, client: 6, completion type: 0, file size:883094
+[44720:259:0719/013013.045558:WARNING:controller_impl.cc(1192)] Background download complete, client: 6, completion type: 0, file size:45150
+[44720:259:0719/013013.859808:WARNING:controller_impl.cc(1192)] Background download complete, client: 6, completion type: 0, file size:2747170
+[44720:259:0719/013015.079002:WARNING:controller_impl.cc(1192)] Background download complete, client: 6, completion type: 0, file size:4680
+[44720:259:0719/013015.200755:WARNING:controller_impl.cc(1192)] Background download complete, client: 6, completion type: 0, file size:2200227
+[44720:259:0719/013015.772960:WARNING:controller_impl.cc(1192)] Background download complete, client: 6, completion type: 0, file size:3844
+[44720:259:0719/013019.086243:WARNING:controller_impl.cc(1192)] Background download complete, client: 6, completion type: 0, file size:1463571
+[44720:259:0719/014923.347954:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
