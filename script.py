@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 
+#INSTRUCTIONS:
 # Run this command in bash or zsh before running!
 #/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222 --user-data-dir="/Users/sabshr/Library/Application Support/Google/Chrome/Default"
+# Run program once. If needed, log into SIS so a session is active.
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
