@@ -6,7 +6,7 @@
 const puppeteer = require('puppeteer');
 
 (async () => {
-    const targetTime = new Date('2024-07-22T11:00:00Z'); // UTC time -- Registration opens at 7:00 AM EST or (2024-07-22T11:00:00Z) in UTC
+    const targetTime = new Date('2024-07-18T11:00:00Z'); // UTC time -- Registration opens at 7:00 AM EST or (2024-07-22T11:00:00Z) in UTC
 
     const browser = await puppeteer.connect({
         browserURL: 'http://localhost:9222',
@@ -28,12 +28,10 @@ const puppeteer = require('puppeteer');
     }
 
     // Select checkbox
-    await newPage.waitForSelector('#SelectAllCheckBox', { visible: true });
     await newPage.click('#SelectAllCheckBox');
     console.log("Clicked 'Select All' checkbox.");
 
     // Click the register button
-    await newPage.waitForSelector('#ctl00_contentPlaceHolder_ibEnroll', { visible: true });
     await newPage.click('#ctl00_contentPlaceHolder_ibEnroll');
     console.log("Clicked 'Register' button.");
 
