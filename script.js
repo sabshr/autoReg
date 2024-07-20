@@ -1,8 +1,3 @@
-// INSTRUCTIONS:
-// Run this command in bash or zsh before running!
-// /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222 --user-data-dir="/Users/sabshr/Library/Application Support/Google/Chrome/Default"
-// Run program once. Will likely require that you log into SIS so a session is active.
-
 const puppeteer = require('puppeteer');
 
 (async () => {
@@ -16,7 +11,7 @@ const puppeteer = require('puppeteer');
     const pages = await browser.pages();
     const page = pages[0]; // Assuming login was done in the first tab
 
-    for (let i = 0; i <= 10; i++) {
+    for (let i = 1; i <= 5; i++) {
         // Open tab
         const newPage = await browser.newPage();
         await newPage.goto('https://sis.jhu.edu/sswf/SSS/EnrollmentCart/SSS_EnrollmentCart.aspx?MyIndex=171958');
