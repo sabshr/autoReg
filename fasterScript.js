@@ -10,34 +10,36 @@ const puppeteer = require('puppeteer');
 
     const browser = await puppeteer.connect({
         browserURL: 'http://localhost:9222',
+
     });
+    console.log('Connected to Browser');
     const pages = await browser.pages();
-    const page = pages[0]; // Assumin login was done in the first tab
+    const page = pages[0]; // Assuming login was done in the first tab
 
-    // Open tab
-    const newPage = await browser.newPage();
-    await newPage.goto('https://sis.jhu.edu/sswf/SSS/EnrollmentCart/SSS_EnrollmentCart.aspx?MyIndex=171958');
-    console.log("Tab Opened.");
+    for (let i = 0; i <= 10; i++) {
+        // Open tab
+        const newPage = await browser.newPage();
+        await newPage.goto('https://sis.jhu.edu/sswf/SSS/EnrollmentCart/SSS_EnrollmentCart.aspx?MyIndex=171958');
+        
 
-    // Time Delay
-    const currentTime = new Date();
-    const timeDelta = targetTime - currentTime;
-    if (timeDelta > 0) {
-        console.log(`Waiting for ${timeDelta / 1000} seconds until the target time.`);
-        await new Promise(resolve => setTimeout(resolve, timeDelta));
+        // Time Delay
+        const currentTime = new Date();
+        const timeDelta = targetTime - currentTime;
+        if (timeDelta > 0) {
+            console.log(`Waiting for ${timeDelta / 1000} seconds until the target time.`);
+            await new Promise(resolve => setTimeout(resolve, timeDelta));
+        }
+
+        // Select checkbox
+        await newPage.click('#SelectAllCheckBox');
+
+        // Click the register button
+        await newPage.click('#ctl00_contentPlaceHolder_ibEnroll');
+
+        // Wait to ensure the registration completes
+        await newPage.waitForSelector('#ctl00_contentPlaceHolder_ibEnroll', { hidden: true });
+        console.log("Registered(" + i + ")");
+        await newPage.close();
     }
-
-    // Select checkbox
-    await newPage.click('#SelectAllCheckBox');
-    console.log("Clicked 'Select All' checkbox.");
-
-    // Click the register button
-    await newPage.click('#ctl00_contentPlaceHolder_ibEnroll');
-    console.log("Clicked 'Register' button.");
-
-    // Wait to ensure the registration completes
-    await newPage.waitForSelector('#ctl00_contentPlaceHolder_ibEnroll', { hidden: true });
-    console.log("Completed.");
-    await newPage.close();
     process.exit();
 })();
