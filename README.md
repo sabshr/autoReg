@@ -1,8 +1,3 @@
-# Dependencies 
-- Node.js
-- Chrome
-- puppeteer
-  
 # Instructions 
 1) Launch Chrome remote debugging port (replace 'sabshr' with your user folder name)
 ### MacOS
@@ -14,7 +9,7 @@
 "C:\Program Files\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222
 ```
 
-2) Log into SIS on a new tab in the opened Chrome window (puppeteer intentionally runs in headed mode)
+2) Log into SIS on a new tab in the opened Chrome window within the remote debugging browser
 2) Adjust `targetTime` and `numberOfTabs` as needed
 3) Run the program!
 
@@ -25,24 +20,9 @@
 
 This project is a Node.js script utilizing **Puppeteer** to automate the process of registering for courses on the SIS platform. The script opens multiple browser tabs in parallel, navigates to the enrollment page, and attempts to register for courses at a pre-specified time.
 
-## Features
-
-- Connects to a remote Chrome instance using Puppeteer.
-- Opens a specified number of tabs to maximize registration attempts.
-- Delays execution until the target registration time.
-- Automates web actions such as clicking buttons and handling asynchronous operations.
-- Logs registration status for each tab, indicating registration success or failure.
-
 ## Prerequisites
 
 - **Node.js** (v12 or higher)
 - **Puppeteer** installed as a dependency.
 - A running instance of Chrome/Chromium with remote debugging enabled (e.g., `chrome --remote-debugging-port=9222`).
 
-## Installation
-
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/your-username/registration-automation.git
-   cd registration-automation
-   
