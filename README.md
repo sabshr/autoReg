@@ -3,22 +3,20 @@
 - Chrome
 - puppeteer
   
-# Instructions (MacOS)
+# Instructions 
 1) Launch Chrome remote debugging port (replace 'sabshr' with your user folder name)
-
+### MacOS
 ```
 /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222 --user-data-dir="/Users/sabshr/Library/Application Support/Google/Chrome/Default"
 ```
-
-# Instructions (Windows)
-1) Launch Chrome remote debugging port (replace 'sabshr' with your user folder name)
-
+### Windows
 ```
 "C:\Program Files\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222
 ```
 
-1) Log into SIS on a new tab in the opened Chrome window (puppeteer intentionally runs in headed mode)
-2) Set time delay (UTC Time) and adjust number of registrations as needed and run program
+2) Log into SIS on a new tab in the opened Chrome window (puppeteer intentionally runs in headed mode)
+2) Adjust `targetTime` and `numberOfTabs` as needed
+3) Run the program!
 
 
 # Automated Course Registration Script
