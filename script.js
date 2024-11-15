@@ -1,15 +1,23 @@
+// For MacOS (Run in Terminal)
+// /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222 --user-data-dir="/Users/sabshr/Library/Application Support/Google/Chrome/Default"
+
+// For Windows (Run in PowerShell)
+// "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222 --user-data-dir="C:\Users\sabshr\AppData\Local\Google\Chrome\User Data\Default"
+
+// Make sure to log into SIS on the opened Chrome window before running the script
+
 const puppeteer = require('puppeteer');
 
 (async () => {
-    const targetTime = new Date('2024-11-15T11:59:58Z'); // UTC time -- Use Google to convert registration time to UTC.
-
+    const targetTime = new Date('2024-11-15T11:59:55Z'); // Convert registration time to UTC -- register ~5 seconds in advance
+    
     
     const browser = await puppeteer.connect({
         browserURL: 'http://localhost:9222',
     });
     
     // Open tabs in parallel (numberOfTabs can be specified)
-    const numberOfTabs = 20; 
+    const numberOfTabs = 10; 
     const newPages = await Promise.all(Array.from({ length: numberOfTabs }, () => browser.newPage()));
 
 
