@@ -9,7 +9,7 @@
 const puppeteer = require('puppeteer');
 
 (async () => {
-    const targetTime = new Date('2024-11-15T11:59:55Z'); // Convert registration time to UTC -- register ~5 seconds in advance
+    const targetTime = new Date('2025-04-11T11:59:53Z'); // Convert registration time to UTC -- register ~7 seconds in advance
     
     
     const browser = await puppeteer.connect({
